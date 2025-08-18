@@ -13,7 +13,6 @@ from location_api.config import Config
 from location_api.models import User
 
 config = Config()  # pyright: ignore[reportCallIssue]
-location_db = pathlib.Path(__file__).parent / "location.db"
 connect_args = {"check_same_thread": False}
 engine = create_engine(config.LOCATION_DATABASE_URI, connect_args=connect_args)
 
@@ -38,7 +37,6 @@ def get_session():
 async def lifespan(_: FastAPI):
     create_db_and_tables()
     yield
-    location_db.unlink(missing_ok=True)
 
 
 SessionDep = Annotated[Session, Depends(get_session)]

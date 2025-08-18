@@ -8,8 +8,8 @@ info:
     name: Specmatic
 
 servers:
-  - url: http://host.docker.internal:3001
   - url: http://localhost:3001
+  - url: http://host.docker.internal:3001
 
 tags:
   - name: Location

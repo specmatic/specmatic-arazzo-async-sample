@@ -16,7 +16,6 @@ from order_api.models import Product
 from order_api.orders.kafka import kafka_worker
 
 config = Config()  # pyright: ignore[reportCallIssue]
-order_db = pathlib.Path(__file__).parent / "order.db"
 connect_args = {"check_same_thread": False}
 engine = create_engine(config.ORDER_DATABASE_URI, connect_args=connect_args)
 
@@ -42,7 +41,6 @@ async def lifespan(_: FastAPI):
     create_db_and_tables()
     threading.Thread(target=kafka_worker, args=(engine,), daemon=True).start()
     yield
-    order_db.unlink(missing_ok=True)
 
 
 SessionDep = Annotated[Session, Depends(get_session)]
