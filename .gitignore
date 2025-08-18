@@ -1,0 +1,7 @@
+.vscode
+.idea
+**/build/
+/workflow/output
+venv
+**/__pycache__/
+*.db
