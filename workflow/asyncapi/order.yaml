@@ -40,6 +40,17 @@ components:
   messages:
     OrderRequest:
       contentType: application/json
+      correlationId:
+        description: Identifier that correlates requests with responses
+        location: "$message.header#/orderRequestId"
+      headers:
+        type: object
+        required:
+        - orderRequestId
+        properties:
+          orderRequestId:
+            type: string
+            description: Unique ID for tracking the order request
       payload:
         type: object
         required:
@@ -50,8 +61,20 @@ components:
             type: integer
           quantity:
             type: integer
+
     OrderResponse:
       contentType: application/json
+      correlationId:
+        description: Identifier that correlates this response with a request
+        location: "$message.header#/orderResponseId"
+      headers:
+        type: object
+        required:
+        - orderResponseId
+        properties:
+          orderResponseId:
+            type: string
+            description: Unique ID for tracking the order response
       payload:
         type: object
         required:

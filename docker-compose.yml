@@ -10,7 +10,7 @@ services:
       kafka:
         condition: service_healthy
     tmpfs:
-       - /app/data:size=64m
+      - /app/data:size=64m
 
   order_api:
     build:
@@ -23,7 +23,7 @@ services:
       kafka:
         condition: service_healthy
     tmpfs:
-       - /app/data:size=64m
+      - /app/data:size=64m
 
   kafka:
     image: bitnami/kafka:latest
