@@ -1,0 +1,50 @@
+arazzo: "1.0.0"
+info:
+  title: "Order Workflow"
+  version: "1.0.0"
+sourceDescriptions:
+  - name: "LocationApi"
+    url: "./openapi/location.yaml"
+    type: "openapi"
+  - name: "OrderApi"
+    url: "./openapi/order.yaml"
+    type: "openapi"
+  - name: "AsyncOrderApi"
+    url: "./asyncapi/order.yaml"
+    type: "asyncapi"
+workflows:
+  - workflowId: "PlaceOrder"
+    steps:
+      - stepId: "GetUserDetails"
+        operationId: "$sourceDescriptions.LocationApi.getUserDetails"
+      - stepId: "GetProducts"
+        operationPath: "{$sourceDescriptions.OrderApi.url}#/paths/~1products/get"
+      - stepId: "CreateOrder"
+        operationId: "$sourceDescriptions.AsyncOrderApi.PlaceOrder"
+      - stepId: "ConfirmOrder"
+        channelPath: "{$sourceDescriptions.AsyncOrderApi.url}#/channels/receive-order"
+        action: "receive"
+      - stepId: "GetOrderDetails"
+        operationId: "$sourceDescriptions.OrderApi.getOrder"
+---
+{
+    "PlaceOrder": {
+        "DEFAULT": {
+            "CreateOrder": {
+                "orderRequestId": "1234567890"
+            },
+            "GetUserDetails": {
+                "email": "specmatic@test.com",
+                "password": "specmatic",
+                "internalToken": "API-TOKEN"
+            }
+        },
+        "GetProducts.IsArrayEmpty": {
+            "$failureMessage": "Expected not to find any products for another@user, as they belong to B Zone",
+            "GetUserDetails": {
+                "email": "another@user.com",
+                "password": "user"
+            }
+        }
+    }
+}
