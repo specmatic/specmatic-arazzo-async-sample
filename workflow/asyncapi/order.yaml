@@ -16,10 +16,10 @@ channels:
       placeOrder.message:
         $ref: "#/components/messages/OrderRequest"
 
-  receive-order:
-    address: receive-order
+  process-order:
+    address: process-order
     messages:
-      receiveOrder.message:
+      processOrder.message:
         $ref: "#/components/messages/OrderResponse"
 
 operations:
@@ -32,9 +32,9 @@ operations:
       - $ref: "#/channels/place-order/messages/placeOrder.message"
     reply:
       channel:
-        $ref: "#/channels/receive-order"
+        $ref: "#/channels/process-order"
       messages:
-        - $ref: "#/channels/receive-order/messages/receiveOrder.message"
+        - $ref: "#/channels/process-order/messages/processOrder.message"
 
 components:
   messages:

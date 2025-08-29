@@ -55,19 +55,22 @@ This builds and starts:
 - [Location API](./location_api) at http://localhost:3001
 - [Kafka](https://kafka.apache.org) at localhost:9092
 
-### Input for backend workflow testing
+### Input for workflow testing
 
 ```json
 {
     "PlaceOrder": {
         "DEFAULT": {
+            "CreateOrder": {
+                "orderRequestId": "1234567890"
+            },
             "GetUserDetails": {
                 "email": "specmatic@test.com",
                 "password": "specmatic",
                 "internalToken": "API-TOKEN"
             }
         },
-        "RetrieveProducts.IsArrayEmpty": {
+        "GetProducts.IsArrayEmpty": {
             "$failureMessage": "Expected not to find any products for another@user, as they belong to B Zone",
             "GetUserDetails": {
                 "email": "another@user.com",

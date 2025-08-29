@@ -22,7 +22,7 @@ workflows:
       - stepId: "CreateOrder"
         operationId: "$sourceDescriptions.AsyncOrderApi.PlaceOrder"
       - stepId: "ConfirmOrder"
-        channelPath: "{$sourceDescriptions.AsyncOrderApi.url}#/channels/receive-order"
+        channelPath: "{$sourceDescriptions.AsyncOrderApi.url}#/channels/process-order"
         action: "receive"
       - stepId: "GetOrderDetails"
         operationId: "$sourceDescriptions.OrderApi.getOrder"
