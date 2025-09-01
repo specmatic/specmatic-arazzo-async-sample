@@ -212,3 +212,4 @@ __marimo__/
 venv
 **/__pycache__/
 *.db
+kafka-logs

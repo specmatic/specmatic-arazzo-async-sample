@@ -29,14 +29,14 @@ This project includes below services:
 
 ## 🔧 Setup
 
-### Clone the Specmatic Arazzo UI Sample repository:
+### Clone the Specmatic Arazzo Async Sample repository:
 ```shell
 git clone https://github.com/specmatic/specmatic-arazzo-async-sample
 cd specmatic-arazzo-async-sample
 ```
 
 ### Launch the Extension:
-Launch it within the Specmatic Arazzo UI Sample project directory as shown in the image below
+Launch it within the Specmatic Arazzo Async Sample project directory as shown in the image below
 
 ![Specmatic Docker Extension](./assets/studio.png)
 
@@ -46,10 +46,16 @@ Launch it within the Specmatic Arazzo UI Sample project directory as shown in th
 
 ## Running the Project
 
-Launch the stack by running the following docker command:
+To launch the stack, execute the following command to build and start the containers:
+### Unix:
 ```shell
-docker compose up --build
+./run.sh
 ```
+### Windows:
+```shell
+sh run.sh
+```
+
 This builds and starts:
 - [Order API](./order_api) at http://localhost:3000
 - [Location API](./location_api) at http://localhost:3001
