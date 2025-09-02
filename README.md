@@ -5,7 +5,7 @@
 
 ## 🎬 Video Walkthrough
 
-[![Visual API Workflow Mocking and Testing with Specmatic and Arazzo API Specifications](https://img.youtube.com/vi/jrkFKh37_N0/hqdefault.jpg)](https://youtu.be/jrkFKh37_N0)
+[![Visual API Workflow Mocking and Testing with Specmatic and Arazzo API Specifications](https://img.youtube.com/vi/Lrud3holLQI/maxres1.jpg)](https://youtu.be/Lrud3holLQI)
 
 
 ## What This Demo Shows
