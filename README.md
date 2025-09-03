@@ -35,7 +35,7 @@ This builds and starts:
 - [Kafka](https://kafka.apache.org) at localhost:9092
 
 ### Launch the Extension:
-Launch it within the Specmatic Arazzo Async Sample project directory as shown in the image below
+Launch the [Specmatic Docker Extension](https://hub.docker.com/extensions/specmatic/specmatic-docker-desktop-extension), populate the `directory` field with the path to the [`specmatic-arazzo-async-sample`](./) directory, as illustrated in the image below and hit `Launch`
 
 ![Specmatic Docker Extension](./assets/studio.png)
 
