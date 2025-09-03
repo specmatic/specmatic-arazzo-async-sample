@@ -20,8 +20,8 @@ engine = create_engine(config.LOCATION_DATABASE_URI, connect_args=connect_args)
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
     users = [
-        User(id=1, email="specmatic@test.com", password="specmatic", shipping_zone="A", country="IN", region="HYD"),  # noqa: S106
-        User(id=2, email="another@user.com", password="user", shipping_zone="B", country="IN", region="DEL"),  # noqa: S106
+        User(id=1, email="test@specmatic.io", password="specmatic", shipping_zone="A", country="IN", region="HYD"),  # noqa: S106
+        User(id=2, email="random@specmatic.io", password="user", shipping_zone="B", country="IN", region="DEL"),  # noqa: S106
     ]
     with Session(engine) as session:
         session.add_all(users)

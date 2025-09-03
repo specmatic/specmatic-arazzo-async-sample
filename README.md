@@ -1,6 +1,6 @@
 # 🚀 Specmatic Arazzo Async Demo
 
-[Specmatic Arazzo](https://hub.docker.com/extensions/specmatic/specmatic-docker-desktop-extension) is a **NO-CODE** workflow testing tool that allows users to efficiently **author**, **validate**, **test**, and **mock** workflows, leveraging [Arazzo API Specifications](https://spec.openapis.org/arazzo/latest.html)
+[Specmatic Arazzo](https://hub.docker.com/extensions/specmatic/specmatic-docker-desktop-extension) is a **NO-CODE** workflow mocking and testing tool that allows users to efficiently **author**, **validate**, **test**, and **mock** workflows, leveraging [Arazzo API Specifications](https://spec.openapis.org/arazzo/latest.html)
 This repository serves as a hands-on companion to the video demonstration below,
 We recommend setting up the project locally and following along with the video tutorial to get the full interactive experience of working with Specmatic Arazzo
 
@@ -67,7 +67,7 @@ This project includes below services:
                 "orderRequestId": "1234567890"
             },
             "GetUserDetails": {
-                "email": "specmatic@test.com",
+                "email": "test@specmatic.io",
                 "password": "specmatic",
                 "internalToken": "API-TOKEN"
             }
@@ -75,7 +75,7 @@ This project includes below services:
         "GetProducts.IsArrayEmpty": {
             "$failureMessage": "Expected not to find any products for another@user, as they belong to B Zone",
             "GetUserDetails": {
-                "email": "another@user.com",
+                "email": "random@specmatic.io",
                 "password": "user"
             }
         }
