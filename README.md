@@ -6,7 +6,7 @@ We recommend setting up the project locally and following along with the video t
 
 ## 🎬 Video Walkthrough
 
-[![Visual API Workflow Mocking and Testing with Specmatic and Arazzo API Specifications](https://img.youtube.com/vi/Lrud3holLQI/maxres1.jpg)](https://youtu.be/Lrud3holLQI)
+[![Visual API Workflow Mocking and Testing with Specmatic and Arazzo API Specifications](https://img.youtube.com/vi/fXWzgqLdWcg/maxres1.jpg)](https://youtu.be/fXWzgqLdWcg)
 
 ## 📋 Prerequisites
 
