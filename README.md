@@ -24,13 +24,9 @@ cd specmatic-arazzo-async-sample
 ## Running the Project
 
 To launch the stack, execute the following command to build and start the containers:
-### Unix:
+
 ```shell
-./run.sh
-```
-### Windows:
-```shell
-sh run.sh
+docker compose up --build
 ```
 
 This builds and starts:
