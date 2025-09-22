@@ -73,7 +73,7 @@ This project includes below services:
             }
         },
         "GetProducts.IsArrayEmpty": {
-            "$failureMessage": "Expected not to find any products for another@user, as they belong to B Zone",
+            "$failureMessage": "Expected not to find any products for random@specmatic.io, as they belong to B Zone",
             "GetUserDetails": {
                 "email": "random@specmatic.io",
                 "password": "user"
