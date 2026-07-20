@@ -7,7 +7,7 @@ email_validator==2.3.0
 fastapi==0.121.0
 greenlet==3.2.4
 h11==0.16.0
-idna==3.11
+idna==3.18
 kafka-python==2.2.15
 pydantic==2.12.4
 pydantic-settings==2.11.0
